@@ -1,6 +1,6 @@
 {
   "name": "replize",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple REPL for embedding into applications",
   "main": "index.js",
   "scripts": {

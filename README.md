@@ -14,6 +14,7 @@ It exports a constructor that takes a configuration hash:
 
 - `port` _number_ (required) Port to listen on. This is how you connect to it
 - `host` _string_ (default: `localhost`) Interface to bind to
+- `prompt` _string_ (default: `> `) REPL prompt
 - `context` _object_ To expose something for REPL you attach it to this object. Key name will become the object name you call in the REPL (see example below).
 
 `bin` folder contains a REPL client you can use:
