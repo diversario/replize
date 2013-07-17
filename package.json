@@ -18,6 +18,9 @@
     "name": "Ilya Shaisultanov",
     "email": "ilya.shaisultanov@gmail.com"
   },
+  "bin": {
+    "repl": "./bin/repl"
+  },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
