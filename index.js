@@ -1,0 +1,1 @@
+module.exports = process.env['COVERAGE_REPLIZE'] ? require ('./lib-cov/') : require('./lib/')

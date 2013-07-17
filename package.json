@@ -1,0 +1,29 @@
+{
+  "name": "replize",
+  "version": "0.0.1",
+  "description": "Simple REPL for embedding into applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "make coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:diversario/replize.git"
+  },
+  "keywords": [
+    "repl",
+    "console"
+  ],
+  "author": {
+    "name": "Ilya Shaisultanov",
+    "email": "ilya.shaisultanov@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.x",
+    "istanbul": "~0.1.36",
+    "coveralls": "~2.0.12",
+    "mocha-istanbul": "~0.2.0"
+  }
+}
