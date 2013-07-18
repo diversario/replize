@@ -4,10 +4,10 @@ if (!process.argv[2]) throw new Error('You must specify the port as parameter.')
 
 var net = require('net')
  
-var sock = net.connect(process.argv[2])
+var socket = net.connect(process.argv[2])
  
 process.stdin.on('end', function () {
-    sock.destroy()
+    socket.destroy()
     console.log()
 })
  
@@ -17,16 +17,22 @@ process.stdin.on('data', function (b) {
     }
 })
    
-process.stdin.pipe(sock)
-sock.pipe(process.stdout)
+process.stdin.pipe(socket)
+socket.pipe(process.stdout)
  
-sock.on('connect', function () {
+socket.on('error', function (e) {
+  console.error('Could not connect: "' + e.message + '"');
+})
+
+socket.setKeepAlive(true, 0)
+
+socket.on('connect', function () {
     process.stdin.resume();
       process.stdin.setRawMode(true)
 })
  
-sock.on('close', function done () {
+socket.on('close', function done () {
     process.stdin.setRawMode(false)
     process.stdin.pause()
-    sock.removeListener('close', done)
+    socket.removeListener('close', done)
 })
