@@ -2,6 +2,11 @@
 
 Add a REPL into your application.
 
+  [![Build Status](https://secure.travis-ci.org/diversario/replize.png?branch=master)](http://travis-ci.org/diversario/replize)
+  [![Coverage Status](https://coveralls.io/repos/diversario/replize/badge.png?branch=master)](https://coveralls.io/r/diversario/replize?branch=master)
+  [![Dependency Status](https://gemnasium.com/diversario/replize.png)](https://gemnasium.com/diversario/replize)
+  [![NPM version](https://badge.fury.io/js/replize.png)](http://badge.fury.io/js/replize)
+
 ```
 npm install replize
 ```
