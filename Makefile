@@ -8,7 +8,7 @@ coverage:
 	@$(MAKE) clean
 	@mkdir reports
 	@istanbul instrument --output lib-cov lib
-	@ISTANBUL_REPORTERS=lcov COVERAGE_EVENTCAST=1 NODE_ENV=test mocha -R mocha-istanbul -t 20s $(TESTS)
+	@ISTANBUL_REPORTERS=lcov COVERAGE_REPLIZE=1 NODE_ENV=test mocha -R mocha-istanbul -t 20s $(TESTS)
 	@mv lcov.info reports
 	@mv lcov-report reports
 	@rm -rf lib-cov

@@ -23,6 +23,13 @@ It exports a constructor that takes a configuration hash:
 ./bin/repl <port>
 ```
 
+### Events
+- `replConnected` `(clientCount)` Client connection is created
+- `replDisconnected` `(clientCount)` Client connection is ended
+- `error (error)` Socket error
+- `replStarted` TCP server is bound
+- `replStopped` TCP server is shutdown
+
 ### Example
 
 ```javascript
