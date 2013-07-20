@@ -64,7 +64,7 @@ function Foo() {
     context: {
       'foo': this
     }
-  })
+  }).start()
 }
 
 Foo.prototype.log = function(){
