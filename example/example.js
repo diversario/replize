@@ -6,11 +6,11 @@ function Foo() {
     context: {
       'foo': this
     }
-  })
+  }).start()
 }
 
 Foo.prototype.log = function () {
   console.log('logged foo')
 }
 
-var f = new Foo()
+new Foo
