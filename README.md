@@ -1,4 +1,4 @@
-### REPLize
+## REPLize
 
 Add a REPL into your application.
 
@@ -11,7 +11,7 @@ Add a REPL into your application.
 npm install replize
 ```
 
-### Usage
+## Usage
 
 `replize` is most useful when attached onto instances (however, it can be used in any way you like).
  
@@ -28,14 +28,32 @@ It exports a constructor that takes a configuration hash:
 ./bin/repl <port>
 ```
 
-### Events
+Alternatively, use `telnet`:
+
+```
+$ telnet localhost 20000
+```
+
+## Events
 - `replConnected` `(clientCount)` Client connection is created
 - `replDisconnected` `(clientCount)` Client connection is ended
 - `error (error)` Socket error
 - `replStarted` TCP server is bound
 - `replStopped` TCP server is shutdown
 
-### Example
+## API
+
+#### replize#start([callback])
+Start the TCP server used by REPL. Optional `callback` is called when server starts listening. Emits `replStarted`.
+
+#### replize#stop([callback])
+Stops the TCP server. Optional `callback` is called when server is shutdown. Emits `replStopped`.
+
+#### replize#clients()
+Returns the number of clients connected to this instance.
+
+
+## Example
 
 ```javascript
 var Repl = require('replize')
